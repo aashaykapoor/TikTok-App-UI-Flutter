@@ -1,4 +1,4 @@
-# tiktokAppUI
+# Tiktok App UI In Flutter
 
 A new Flutter project.
 
