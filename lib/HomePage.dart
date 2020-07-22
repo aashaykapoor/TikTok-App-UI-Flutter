@@ -1,35 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:tiktokAppUI/widgets/actions_tool.dart';
+import 'package:tiktokAppUI/widgets/bottomTools.dart';
+import 'package:tiktokAppUI/widgets/videoDesc.dart';
+
+
+
 class Home extends StatelessWidget {
+  Widget get topSection => Container(
+        height: 100.0,
+        color: Colors.yellow[300],
+      );
 
-
-  Widget get topSection=> Container(
-            height: 100.0,
-            color: Colors.yellow[300],
-          );
-  Widget get bottomSection=>Container(
-            height: 80,
-            color: Colors.blue,
-          );
-
-  Widget get videoDescription=>Expanded(child: Column(
-    children: <Widget>[
-      Container()
-    ],
-                color: Colors.green,
-              ));
-  
-  Widget get actionsToolbar=>Container(
-                width: 100,
-                color: Colors.red,
-              );
-
-  Widget get middleSection=>Expanded(child: 
-          Row(
-            children: <Widget>[
-              videoDescription,
-              actionsToolbar
-            ],
-          ));
+  Widget get middleSection => Expanded(
+          child: Row(
+        children: <Widget>[VideoDescription(), ActionToolBar()],
+      ));
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +22,14 @@ class Home extends StatelessWidget {
       body: Column(
         children: <Widget>[
           // Top Section
-         topSection,
+          topSection,
           // Middle Section
           middleSection,
           // Bottom Section
-          bottomSection,
-          
+         BottomToolBar(),
         ],
       ),
-      
     );
   }
 }
+//5:29
