@@ -12,6 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Tikok UI',
+      theme: ThemeData(
+       textTheme:Theme.of(context).textTheme.apply(
+        bodyColor: Colors.white,
+        displayColor: Colors.white
+      ),
+      ),
       home: Home(),   
     );
   }
